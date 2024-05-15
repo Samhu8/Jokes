@@ -4,7 +4,17 @@ I created my own site where you can click on a category to select a type of joke
 
 I used a public API which was added to my project.
 
+API used: JokeAPI Documentation
+
+# How to use:
+
 Install NPM package by using: 
 npm i
 
-Run it by doing the following: nodemon index.js
+Run it with nodemon index.js
+
+go to http://localhost:3000/
+
+# Used: 
+
+Node.js and Express.js
