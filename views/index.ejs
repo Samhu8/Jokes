@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <title>Jokes</title>
+</head>
+<body>
+    <h1>Tell Me A Joke! 🤡</h1>
+
+    <div class="joke_main_section">
+        <form action="/joke-result" method="post">
+            <label for="chosen" id="form_label">Select Your Category: </label>
+            <select name="chosen" id="joke-selector">
+                <option value="Misc">Misc</option>
+                <option value="Any">Any</option>
+                <option value="Programming">Programming</option>
+                <option value="Pun">Pun</option>
+                <option value="Spooky">Spooky</option>
+                <option value="Christmas">Christmas</option>
+            </select>
+            <input type="submit" id="form_btn">
+        </form>
+        <a href="/"><button id="clear_btn">Clear</button></a>
+    </div>
+
+    <p>
+        <%= locals.joke %> <br>
+        <%= locals.setup %> <br>
+        <%= locals.delivery %>
+    </p>
+
+
+
+
+
+
+    <footer>Hugo Samayoa &#169 2024 </footer>
+
+    <script>
+        document.getElementById("form_btn").onmouseover = function() {mouseOver()};
+        document.getElementById("form_btn").onmouseout = function() {mouseOut()};
+
+        function mouseOver() {
+            document.getElementById("form_btn").style.color = "#C8FFE0";
+            document.getElementById("form_btn").style.backgroundColor = "#FE7BE5";
+        }
+
+        function mouseOut() {
+            document.getElementById("form_btn").style.color = "#FE7BE5";
+            document.getElementById("form_btn").style.backgroundColor = "#C8FFE0";
+        }
+
+    </script>
+</body>
+</html>
